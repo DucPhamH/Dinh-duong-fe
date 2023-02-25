@@ -18,17 +18,20 @@ function Header() {
     setActiveMenu(!activeMenu)
   }
   return (
-    <div className='w-full z-1000 top-0 fixed text-gray-900 '>
-      <div className='flex justify-between items-center py-8 px-8 mx-auto max-w-screen-xl md:px-4'>
+    <div className='w-full top-0 fixed z-10 text-gray-900 '>
+      <div className='flex justify-between items-center pt-4 pb-8 px-8 mx-auto max-w-screen-xl md:px-4'>
         <button
           onClick={handleActiveMenu}
           className='block md:hidden relative z-30 focus:outline-none transform  -translate-x-1/2 -translate-y-1/2 active:scale-75 transition-transform'
         >
           <AiOutlineMenu className='text-3xl' />
         </button>
-        <Link to='/' className='w-20 md:w-24'>
-          <div>
+        <Link to='/' className='w-20 md:w-28'>
+          <div className='flex'>
             <img src={logo} alt='logo' />
+            <div class='text-3xl pl-2 md:flex items-center font-bold tracking-wide'>
+              Dinh <span class='text-yellow-500'>Duong</span>
+            </div>
           </div>
         </Link>
         <Navbar activeMenu={activeMenu} />
