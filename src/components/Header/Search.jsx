@@ -4,7 +4,7 @@ function Search({ activeSearch }) {
     <div>
       {activeSearch && (
         <div
-          className='search-form flex items-center space-x-4 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-8 xl:px-10
+          className='search-form flex items-center space-x-4 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-10 xl:px-8
 transform duration-500 transition-all'
         >
           <div className='flex bg-gray-200 p-3 w-full space-x-2 rounded-lg items-center'>
