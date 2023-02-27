@@ -1,40 +1,110 @@
-import videoBg from '../../asset/video/lemon.mp4'
-import videoBg1 from '../../asset/video/tomato.mp4'
-import videoBg2 from '../../asset/video/yard.mp4'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import Banner from './Banner'
+import CardItem from './CardItem'
 
-const listVideo = [{ video: videoBg }, { video: videoBg1 }, { video: videoBg2 }]
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'orange',
+        borderRadius: '9999px',
+        width: '40px',
+        height: '40px',
+        zIndex: '2',
+        marginLeft: '60px'
+      }}
+      onClick={onClick}
+    />
+  )
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'orange',
+        borderRadius: '9999px',
+        width: '40px',
+        height: '40px',
+        zIndex: '2',
+        right: '-40px'
+      }}
+      onClick={onClick}
+    />
+  )
+}
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 2000,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  initialSlide: 0,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  cssEase: 'linear',
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 5000,
+        cssEase: 'linear'
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+}
 
 function Home() {
   return (
     <>
-      <div className='grid grid-cols-1 bg-blue-50'>
-        <div className='relative w-full'>
-          <video
-            className='w-full lg:h-[52rem]  object-cover '
-            src={listVideo[Math.floor(Math.random() * 3)].video}
-            autoPlay
-            loop
-            muted
-          ></video>
-        </div>
-
-        <div className='absolute  flex items-end justify-around md:h-[44rem] lg:h-[52rem] w-full'>
-          <div className='pb-20 xs:hidden'>
-            <button class='bg-black px-10 text-xl md:text-3xl hover:bg-yellow-500 text-white font-medium  py-5  md:px-32  lg:px-44 border border-white hover:border-transparent rounded-full'>
-              Button
-            </button>
-          </div>
-          <div className='pb-20 xs:hidden'>
-            <button class='bg-black text-xl md:text-3xl hover:bg-yellow-500 text-white font-medium  py-5 md:px-32 px-10 lg:px-44 border border-white hover:border-transparent rounded-full'>
-              Button
-            </button>
-          </div>
-          <div className='pb-20 xs:hidden'>
-            <button class='bg-black text-xl md:text-3xl hover:bg-yellow-500 text-white font-medium  py-5 md:px-32 px-10 lg:px-44 border border-white hover:border-transparent rounded-full'>
-              Button
-            </button>
-          </div>
-        </div>
+      <Banner />
+      <div className='w-full pl-24 pr-24 pt-28'>
+        <div className='text-gray-600 font-bold text-5xl flex justify-center pb-16'> Thực đơn hàng ngày </div>
+        <Slider {...settings}>
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+          <CardItem />
+        </Slider>
       </div>
     </>
   )
