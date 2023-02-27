@@ -1,3 +1,4 @@
+import { Footer } from '../Footer'
 import { Header } from '../Header'
 
 function Mainlayout({ children }) {
@@ -8,6 +9,9 @@ function Mainlayout({ children }) {
       </div>
 
       <div className=' mt-40 z-0 h-auto text-white'>{children}</div>
+      <div className='pt-40'>
+        <Footer />
+      </div>
     </>
   )
 }
