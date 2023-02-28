@@ -1,37 +1,37 @@
 import { BsFacebook } from 'react-icons/bs'
 function Footer() {
   return (
-    <footer class='relative bg-gray-400 pt-8 pb-6'>
-      <div class='container mx-auto px-10'>
-        <div class='flex flex-wrap text-left lg:text-left'>
-          <div class='w-full lg:w-6/12 px-4'>
-            <h4 class='text-5xl font-bold text-blueGray-700'>Let's keep in touch!</h4>
-            <h5 class='text-2xl mt-6 mb-6 text-blueGray-600'>
+    <footer className='relative bg-gray-400 pt-8 pb-6'>
+      <div className='container mx-auto px-10'>
+        <div className='flex flex-wrap text-left lg:text-left'>
+          <div className='w-full lg:w-6/12 px-4'>
+            <h4 className='text-5xl font-bold text-blueGray-700'>Let's keep in touch!</h4>
+            <h5 className='text-2xl mt-6 mb-6 text-blueGray-600'>
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
-            <div class='mt-6 lg:mb-0 mb-6 flex'>
-              <div class='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
+            <div className='mt-6 lg:mb-0 mb-6 flex'>
+              <div className='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
                 <BsFacebook />
               </div>
-              <div class='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
+              <div className='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
                 <BsFacebook />
               </div>
-              <div class='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
+              <div className='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
                 <BsFacebook />
               </div>
-              <div class='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
+              <div className='bg-white text-lightBlue-400 shadow-lg font-normal h-14 w-14 flex items-center justify-center align-center rounded-full outline-none focus:outline-none mr-4'>
                 <BsFacebook />
               </div>
             </div>
           </div>
-          <div class='w-full lg:w-6/12 px-4'>
-            <div class='flex flex-wrap items-top mb-6'>
-              <div class='w-full lg:w-4/12 px-4 ml-auto'>
-                <span class='block uppercase text-blueGray-500 font-semibold text-2xl mb-6'>Useful Links</span>
-                <ul class='list-unstyled'>
+          <div className='w-full lg:w-6/12 px-4'>
+            <div className='flex flex-wrap items-top mb-6'>
+              <div className='w-full lg:w-4/12 px-4 ml-auto'>
+                <span className='block uppercase text-blueGray-500 font-semibold text-2xl mb-6'>Useful Links</span>
+                <ul className='list-unstyled'>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://www.creative-tim.com/presentation?ref=njs-profile'
                     >
                       About Us
@@ -39,7 +39,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://blog.creative-tim.com?ref=njs-profile'
                     >
                       Blog
@@ -47,7 +47,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://www.github.com/creativetimofficial?ref=njs-profile'
                     >
                       Github
@@ -55,7 +55,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile'
                     >
                       Free Products
@@ -63,12 +63,12 @@ function Footer() {
                   </li>
                 </ul>
               </div>
-              <div class='w-full lg:w-4/12 px-4 ml-auto'>
-                <span class='block uppercase text-blueGray-500 font-semibold text-2xl mb-6'>Useful Links</span>
-                <ul class='list-unstyled'>
+              <div className='w-full lg:w-4/12 px-4 ml-auto'>
+                <span className='block uppercase text-blueGray-500 font-semibold text-2xl mb-6'>Useful Links</span>
+                <ul className='list-unstyled'>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://www.creative-tim.com/presentation?ref=njs-profile'
                     >
                       About Us
@@ -76,7 +76,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://blog.creative-tim.com?ref=njs-profile'
                     >
                       Blog
@@ -84,7 +84,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://www.github.com/creativetimofficial?ref=njs-profile'
                     >
                       Github
@@ -92,7 +92,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile'
                     >
                       Free Products
@@ -100,12 +100,12 @@ function Footer() {
                   </li>
                 </ul>
               </div>
-              <div class='w-full lg:w-4/12 px-4'>
-                <span class='block uppercase text-blueGray-500 text-2xl font-semibold mb-6'>Other Resources</span>
-                <ul class='list-unstyled'>
+              <div className='w-full lg:w-4/12 px-4'>
+                <span className='block uppercase text-blueGray-500 text-2xl font-semibold mb-6'>Other Resources</span>
+                <ul className='list-unstyled'>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile'
                     >
                       MIT License
@@ -113,7 +113,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://creative-tim.com/terms?ref=njs-profile'
                     >
                       Terms &amp; Conditions
@@ -121,7 +121,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://creative-tim.com/privacy?ref=njs-profile'
                     >
                       Privacy Policy
@@ -129,7 +129,7 @@ function Footer() {
                   </li>
                   <li>
                     <a
-                      class='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
+                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-xl'
                       href='https://creative-tim.com/contact-us?ref=njs-profile'
                     >
                       Contact Us
@@ -140,10 +140,10 @@ function Footer() {
             </div>
           </div>
         </div>
-        <hr class='my-8 border-blueGray-600' />
-        <div class='flex flex-wrap items-center md:justify-between justify-center'>
-          <div class='w-full md:w-4/12 px-4 mx-auto text-center'>
-            <div class='text-lg text-blueGray-500 font-semibold py-1'>
+        <hr className='my-8 border-blueGray-600' />
+        <div className='flex flex-wrap items-center md:justify-between justify-center'>
+          <div className='w-full md:w-4/12 px-4 mx-auto text-center'>
+            <div className='text-lg text-blueGray-500 font-semibold py-1'>
               Thông tin trên Website chỉ mang tính chất tham khảo
             </div>
           </div>
