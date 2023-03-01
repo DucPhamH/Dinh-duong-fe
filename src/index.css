@@ -28,3 +28,6 @@ body {
     transform: translateX(-100%);
   }
 }
+.back_ground {
+  background-image: url(../src/asset/img/fruit.jpg);
+}

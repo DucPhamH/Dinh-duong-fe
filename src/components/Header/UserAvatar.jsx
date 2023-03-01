@@ -1,5 +1,6 @@
 import logo from '../../asset/img/logoHealthy.png'
 import { Link } from 'react-router-dom'
+
 function UserAvatar() {
   return (
     <div className='group relative inline-block'>
