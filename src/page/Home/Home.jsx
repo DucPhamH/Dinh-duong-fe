@@ -96,7 +96,7 @@ function Home() {
   return (
     <>
       <Banner />
-      <div className='w-full md:px-28 lg:px-32 pt-28'>
+      <div className='w-full px-24 md:px-28 lg:px-32 pt-28'>
         <div className='flex justify-center items-center w-full'>
           <div className='w-64 h-1  bg-gray-400'></div>
           <div className='text-gray-600  text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
