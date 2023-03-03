@@ -53,7 +53,7 @@ const settings = {
   infinite: true,
   speed: 2000,
   slidesToShow: 4,
-  slidesToScroll: 1,
+  slidesToScroll: 2,
   initialSlide: 0,
   autoplay: true,
   autoplaySpeed: 5000,
@@ -66,8 +66,8 @@ const settings = {
       settings: {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 5000,
@@ -78,7 +78,7 @@ const settings = {
       breakpoint: 600,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         initialSlide: 2
       }
     },
@@ -96,8 +96,15 @@ function Home() {
   return (
     <>
       <Banner />
-      <div className='w-full pl-24 pr-24 pt-28'>
-        <div className='text-gray-600 font-bold text-5xl flex justify-center pb-16'> Thực đơn hàng ngày </div>
+      <div className='w-full md:px-28 lg:px-32 pt-28'>
+        <div className='flex justify-center items-center w-full'>
+          <div className='w-64 h-1  bg-gray-400'></div>
+          <div className='text-gray-600  text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
+            Thực đơn hàng ngày
+          </div>
+          <div className='w-64 h-1 bg-gray-400'></div>
+        </div>
+
         <Slider {...settings}>
           <CardItem />
           <CardItem />
@@ -107,14 +114,22 @@ function Home() {
         </Slider>
       </div>
       <div className='w-full pt-36'>
-        <div className='text-gray-600 font-bold text-5xl flex justify-center pb-16'> Kiến thức dinh dưỡng </div>
+        <div className='w-full pl-24 pr-24 pt-28'>
+          <div className='flex justify-center items-center w-full'>
+            <div className='w-64 h-1 bg-gray-400'></div>
+            <div className='text-gray-600 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
+              Kiến thức dinh dưỡng
+            </div>
+            <div className='w-64 h-1 bg-gray-400'></div>
+          </div>
+        </div>
         <div className='z-1 relative items-center justify-center w-full h-[50rem] overflow-hidden'>
           <div className='inset-0 back_ground h-screen bg-cover bg-center'></div>
           <div className='absolute inset-0 z-1 flex items-center justify-center h-screen w-full bg-yellow-900 bg-opacity-75'></div>
           <div className='absolute inset-0  z-2  flex flex-col items-center justify-center'>
             <div className='shadow-2xl back_ground rounded-lg w-4/5 h-96 bg-cover bg-center'>
               <div className='grid grid-cols-12 gap-1'>
-                <div className='relative my-6 px-8 col-span-12 sm:col-span-12 md:col-span-7 lg:col-span-7 xxl:col-span-7'>
+                <div className='relative my-6 px-8 col-span-12 sm:col-span-12 md:col-span-7 lg:col-span-7 2xl:col-span-7'>
                   <div className='border-l-4 border-gray-400 py-20 px-5 mx-2 absolute left-0'>
                     <p className='italic text-white text-xl md:text-4xl lg:text-6xl uppercase text-center  font-semibold '>
                       The Mysteries Of The Forest
