@@ -1,1 +1,2 @@
-export { default as ThucDon } from './ThucDon'
+import ThucDon from './ThucDon'
+export default ThucDon

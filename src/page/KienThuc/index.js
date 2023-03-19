@@ -1,1 +1,2 @@
-export { default as KienThuc } from './KienThuc'
+import KienThuc from './KienThuc'
+export default KienThuc

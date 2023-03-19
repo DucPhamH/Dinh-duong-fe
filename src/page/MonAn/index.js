@@ -1,1 +1,2 @@
-export { default as MonAn } from './MonAn'
+import MonAn from './MonAn'
+export default MonAn

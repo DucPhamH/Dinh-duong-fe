@@ -29,7 +29,7 @@ function Navbar({ activeMenu }) {
     {
       id: 5,
       title: 'Mua bán',
-      route: '/chis'
+      route: '/mua-ban'
     }
   ]
   return (

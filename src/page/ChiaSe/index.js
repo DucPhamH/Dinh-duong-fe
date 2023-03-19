@@ -1,1 +1,2 @@
-export { default as ChiaSe } from './ChiaSe'
+import ChiaSe from './ChiaSe'
+export default ChiaSe

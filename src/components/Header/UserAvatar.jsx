@@ -43,7 +43,7 @@ transition duration-300 ease-in-out md:top-14 bg-white divide-y divide-gray-100 
           </li>
         </ul>
         <div className='py-2'>
-          <Link to='#' className='block text-red-500 px-4 py-2 text-2xl text-gray-700 hover:bg-gray-100'>
+          <Link to='#' className='block text-red-500 px-4 py-2 text-2xl  hover:bg-gray-100'>
             Sign out
           </Link>
         </div>
