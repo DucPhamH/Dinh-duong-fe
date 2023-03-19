@@ -27,9 +27,9 @@ export default function Login() {
         />
         <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'></div>
       </div>
-      <div className='text-right text-gray-500 mt-5 hover:underline hover:text-gray-100'>
+      <div className='text-right text-gray-500 flex  '>
         <span className='text-gray-400'>Bạn chưa có tài khoản?</span>
-        <Link className='ml-1 text-red-400' to='/register'>
+        <Link className='ml-1 text-red-400 hover:underline hover:text-red-700' to='/register'>
           Đăng ký
         </Link>
       </div>
