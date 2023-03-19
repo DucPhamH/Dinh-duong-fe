@@ -12,13 +12,13 @@ export default function Register() {
           name='email'
           id='email'
           placeholder='Email'
-          className='block w-full p-4 text-2xl border border-gray-300 rounded-lg '
+          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-lg '
         />
         <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'></div>
       </div>
       <div className='pb-3'>
         <input
-          className='block w-full p-4 text-2xl border border-gray-300 rounded-sm'
+          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-sm'
           type='password'
           name='password'
           id='password'
@@ -29,7 +29,7 @@ export default function Register() {
       </div>
       <div className='pb-3'>
         <input
-          className='block w-full p-4 text-2xl border border-gray-300 rounded-sm'
+          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-sm'
           type='password'
           name='confirm_password'
           id='password'
@@ -44,7 +44,7 @@ export default function Register() {
           Đăng nhập
         </Link>
       </div>
-      <div className='px-4 pb-2 pt-4'>
+      <div className='px-4 pb-2 pt-4 rounded-full'>
         <button className='uppercase block w-full p-5 mt-6 text-2xl rounded-full bg-orange-500 hover:bg-orange-600 focus:outline-none'>
           sign up
         </button>

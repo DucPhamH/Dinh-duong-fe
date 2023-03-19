@@ -33,7 +33,7 @@ export default function Login() {
           Đăng ký
         </Link>
       </div>
-      <div className='px-4 pb-2 pt-4'>
+      <div className='px-4 pb-2 rounded-full pt-4'>
         <button className='uppercase block w-full p-5 mt-6 text-2xl rounded-full bg-orange-500 hover:bg-orange-600 focus:outline-none'>
           sign in
         </button>
