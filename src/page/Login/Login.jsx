@@ -29,7 +29,7 @@ export default function Login() {
           className='block w-full p-4  text-black text-2xl border border-gray-300 rounded-lg '
           {...register('email', rules.email)}
         />
-        <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'>{errors.email?.message}</div>
+        <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.email?.message}</div>
       </div>
       <div className='pb-3'>
         <input
@@ -41,7 +41,7 @@ export default function Login() {
           autoComplete='on'
           {...register('password', rules.password)}
         />
-        <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'>{errors.password?.message}</div>
+        <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.password?.message}</div>
       </div>
       <div className='text-right text-gray-500 flex  '>
         <span className='text-gray-400'>Bạn chưa có tài khoản?</span>

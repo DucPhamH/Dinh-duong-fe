@@ -29,7 +29,7 @@ export default function Register() {
           className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-lg '
           {...register('email', rules.email)}
         />
-        <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'>{errors.email?.message}</div>
+        <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.email?.message}</div>
       </div>
       <div className='pb-3'>
         <input
@@ -39,7 +39,7 @@ export default function Register() {
           autoComplete='on'
           {...register('password', rules.password)}
         />
-        <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'>{errors.password?.message}</div>
+        <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.password?.message}</div>
       </div>
       <div className='pb-3'>
         <input
@@ -52,7 +52,7 @@ export default function Register() {
             validate: (value) => value === getValues('password') || 'Nhập không khớp password'
           })}
         />
-        <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'>{errors.confirm_password?.message}</div>
+        <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.confirm_password?.message}</div>
       </div>
       <div className='text-right text-gray-500 flex  '>
         <span className='text-gray-400'>Bạn đã có tài khoản?</span>
