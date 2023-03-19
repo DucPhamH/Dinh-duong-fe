@@ -12,13 +12,13 @@ export default function Login() {
           name='email'
           id='email'
           placeholder='Email'
-          className='block w-full p-4 text-2xl border border-gray-300 rounded-lg '
+          className='block w-full p-4  text-black text-2xl border border-gray-300 rounded-lg '
         />
         <div className='mt-1 flex min-h-[1.25rem] text-lg text-red-600'></div>
       </div>
       <div className='pb-3'>
         <input
-          className='block w-full p-4 text-2xl border border-gray-300 rounded-sm'
+          className='block w-full p-4 text-black text-2xl border border-gray-300 rounded-sm'
           type='password'
           name='password'
           id='password'
