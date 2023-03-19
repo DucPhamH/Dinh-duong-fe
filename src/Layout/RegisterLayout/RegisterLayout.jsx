@@ -1,9 +1,13 @@
+import { Link } from 'react-router-dom'
+
 export default function RegisterLayout({ children }) {
   return (
     <section className='min-h-screen flex items-stretch text-white '>
       <div className='lg:flex w-1/2 hidden bg-no-repeat bg-cover relative items-center back_ground_register'>
         <div className='w-full px-24 z-10'>
-          <h1 className='text-6xl font-bold text-left tracking-wide'>Chào mừng đến với web dinh dưỡng</h1>
+          <Link to='/' className='text-6xl font-bold text-left tracking-wide'>
+            Chào mừng đến với web dinh dưỡng
+          </Link>
           <p className='text-3xl my-4'>Hãy chú ý đến sức khoẻ của mình nhé !</p>
         </div>
       </div>
