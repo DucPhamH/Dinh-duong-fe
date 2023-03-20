@@ -36,7 +36,7 @@ export default function Login() {
       </div>
       <div className='pb-3'>
         <input
-          className='block w-full p-4 text-black text-2xl border border-gray-300 rounded-sm'
+          className='block w-full p-4 text-black text-2xl border border-gray-300 rounded-lg'
           type='password'
           name='password'
           id='password'
