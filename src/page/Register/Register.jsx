@@ -1,14 +1,14 @@
-import { rules } from '../../ultils/rules'
+import { schema } from '../../ultils/rules'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { yupResolver } from '@hookform/resolvers/yup'
 
 export default function Register() {
   const {
     register,
     handleSubmit,
-    getValues,
     formState: { errors }
-  } = useForm()
+  } = useForm({ resolver: yupResolver(schema) })
   const onSubmit = handleSubmit((data) => {
     console.log(data)
   })
@@ -27,30 +27,27 @@ export default function Register() {
           id='email'
           placeholder='Email'
           className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-lg '
-          {...register('email', rules.email)}
+          {...register('email')}
         />
         <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.email?.message}</div>
       </div>
       <div className='pb-3'>
         <input
-          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-sm'
+          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-lg'
           type='password'
           placeholder='Password'
           autoComplete='on'
-          {...register('password', rules.password)}
+          {...register('password')}
         />
         <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.password?.message}</div>
       </div>
       <div className='pb-3'>
         <input
-          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-sm'
+          className='block w-full p-4 text-2xl text-black border border-gray-300 rounded-lg'
           type='password'
           placeholder='Confirm Password'
           autoComplete='on'
-          {...register('confirm_password', {
-            ...rules.confirm_password,
-            validate: (value) => value === getValues('password') || 'Nhập không khớp password'
-          })}
+          {...register('confirm_password')}
         />
         <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.confirm_password?.message}</div>
       </div>

@@ -1,13 +1,16 @@
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
-import { rules } from '../../ultils/rules'
+import { schema } from '../../ultils/rules'
+import { yupResolver } from '@hookform/resolvers/yup'
 
 export default function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm()
+  } = useForm({
+    resolver: yupResolver(schema)
+  })
   const onSubmit = handleSubmit((data) => {
     console.log(data)
   })
@@ -27,7 +30,7 @@ export default function Login() {
           id='email'
           placeholder='Email'
           className='block w-full p-4  text-black text-2xl border border-gray-300 rounded-lg '
-          {...register('email', rules.email)}
+          {...register('email')}
         />
         <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.email?.message}</div>
       </div>
@@ -39,7 +42,7 @@ export default function Login() {
           id='password'
           placeholder='Password'
           autoComplete='on'
-          {...register('password', rules.password)}
+          {...register('password')}
         />
         <div className='mt-1 flex min-h-[1.75rem] text-lg text-red-600'>{errors.password?.message}</div>
       </div>
