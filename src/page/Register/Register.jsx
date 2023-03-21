@@ -2,15 +2,41 @@ import { schema } from '../../ultils/rules'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useMutation } from '@tanstack/react-query'
+import { registerAccount } from '../../apis/auth.api'
+import { isAxiosUnprocessableEntityError } from '../../ultils/utils'
 
 export default function Register() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors }
   } = useForm({ resolver: yupResolver(schema) })
+
+  const registerAccountMutation = useMutation({
+    mutationFn: (body) => registerAccount(body)
+  })
   const onSubmit = handleSubmit((data) => {
-    console.log(data)
+    registerAccountMutation.mutate(data, {
+      onSuccess: (data) => {
+        console.log(data)
+      },
+      onError: (error) => {
+        if (isAxiosUnprocessableEntityError(error)) {
+          //console.log(error)
+          const formError = error.response?.data.data
+          if (formError) {
+            Object.keys(formError).forEach((key) => {
+              setError(key, {
+                message: formError[key],
+                type: 'Server'
+              })
+            })
+          }
+        }
+      }
+    })
   })
   return (
     <form
