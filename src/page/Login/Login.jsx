@@ -2,17 +2,46 @@ import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { schema } from '../../ultils/rules'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { useMutation } from '@tanstack/react-query'
+import { login } from '../../apis/auth.api'
+import { isAxiosUnprocessableEntityError } from '../../ultils/utils'
+
+const loginSchema = schema.omit(['confirm_password'])
 
 export default function Login() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors }
   } = useForm({
-    resolver: yupResolver(schema)
+    resolver: yupResolver(loginSchema)
+  })
+
+  const loginAccountMutation = useMutation({
+    mutationFn: (body) => login(body)
   })
   const onSubmit = handleSubmit((data) => {
-    console.log(data)
+    console.log('data', data)
+    loginAccountMutation.mutate(data, {
+      onSuccess: (data) => {
+        console.log(data)
+      },
+      onError: (error) => {
+        if (isAxiosUnprocessableEntityError(error)) {
+          //console.log(error)
+          const formError = error.response?.data.data
+          if (formError) {
+            Object.keys(formError).forEach((key) => {
+              setError(key, {
+                message: formError[key],
+                type: 'Server'
+              })
+            })
+          }
+        }
+      }
+    })
   })
   return (
     <form
