@@ -1,8 +1,9 @@
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import Banner from './Banner'
+
 import CardItem from './CardItem'
+import Banner from '../../components/Banner'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props
@@ -53,10 +54,10 @@ const settings = {
   infinite: true,
   speed: 2000,
   slidesToShow: 4,
-  slidesToScroll: 2,
+  slidesToScroll: 1,
   initialSlide: 0,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 4000,
   cssEase: 'linear',
   nextArrow: <SampleNextArrow />,
   prevArrow: <SamplePrevArrow />,
@@ -70,7 +71,7 @@ const settings = {
         slidesToScroll: 2,
         autoplay: true,
         speed: 2000,
-        autoplaySpeed: 5000,
+        autoplaySpeed: 4000,
         cssEase: 'linear'
       }
     },

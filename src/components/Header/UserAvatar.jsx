@@ -1,9 +1,17 @@
 import logo from '../../asset/img/logoHealthy.png'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 function UserAvatar() {
+  const [open, setOpen] = useState(false)
+  const showPopover = () => {
+    setOpen(true)
+  }
+  const hidePopover = () => {
+    setOpen(false)
+  }
   return (
-    <div className='group relative inline-block'>
+    <div className='group relative inline-block' onMouseEnter={showPopover} onMouseLeave={hidePopover}>
       <button
         className='flex mr-3 items-center text-xl font-bold text-gray-900 rounded-full hover:text-yellow-500 md:mx-7 md:text-xl lg:text-2xl'
         type='button'
@@ -26,28 +34,30 @@ function UserAvatar() {
       </button>
 
       {/* <!-- Dropdown menu --> */}
-      <div
-        className='z-10 top-14 right-10 transform scale-0 group-hover:scale-100 absolute
-transition duration-300 ease-in-out md:top-14 bg-white divide-y divide-gray-100 rounded-lg shadow w-56'
-      >
-        <ul className='py-2 text-sm text-gray-700'>
-          <li>
-            <Link to='/' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
-              Dashboard
+      {open && (
+        <div
+          className='z-10 top-14 right-10 transform scale-0 group-hover:scale-100 absolute
+          transition duration-300 ease-in-out md:top-14 bg-white divide-y divide-gray-100 rounded-lg shadow w-56'
+        >
+          <ul className='py-2 text-sm text-gray-700'>
+            <li>
+              <Link to='/' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
+                Dashboard
+              </Link>
+            </li>
+            <li>
+              <Link to='#' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
+                Settings
+              </Link>
+            </li>
+          </ul>
+          <div className='py-2'>
+            <Link to='#' className='block text-red-500 px-4 py-2 text-2xl  hover:bg-gray-100'>
+              Sign out
             </Link>
-          </li>
-          <li>
-            <Link to='#' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
-              Settings
-            </Link>
-          </li>
-        </ul>
-        <div className='py-2'>
-          <Link to='#' className='block text-red-500 px-4 py-2 text-2xl  hover:bg-gray-100'>
-            Sign out
-          </Link>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   )
 }

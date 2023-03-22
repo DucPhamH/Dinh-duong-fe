@@ -36,7 +36,7 @@ function Header() {
         <Link to='/' className='w-20 md:w-24 lg:w-28'>
           <div className='flex'>
             <img src={logo} alt='logo' />
-            <div className='text-2xl pl-2 md:flex items-center font-bold md:text-2xl lg:text-3xl tracking-wide'>
+            <div className='text-2xl pl-2 hidden md:flex items-center font-bold md:text-2xl lg:text-3xl tracking-wide'>
               Dinh <span className='text-yellow-500'>Duong</span>
             </div>
           </div>
