@@ -4,6 +4,7 @@ import 'slick-carousel/slick/slick-theme.css'
 
 import CardItem from './CardItem'
 import Banner from '../../components/Banner'
+import CardItem2 from './CardItem2'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props
@@ -95,7 +96,7 @@ const settings = {
 
 function Home() {
   return (
-    <>
+    <div>
       <Banner />
       <div className='w-full px-24 md:px-28 lg:px-32 pt-28'>
         <div className='flex justify-center items-center w-full'>
@@ -114,7 +115,7 @@ function Home() {
           <CardItem />
         </Slider>
       </div>
-      <div className='w-full pt-36'>
+      <div className='w-full pt-20'>
         <div className='w-full pl-24 pr-24 pt-28'>
           <div className='flex justify-center items-center w-full'>
             <div className='w-64 h-1 bg-gray-400'></div>
@@ -125,10 +126,10 @@ function Home() {
           </div>
         </div>
         <div className='z-1 relative items-center justify-center w-full h-[50rem] overflow-hidden'>
-          <div className='inset-0 back_ground h-screen bg-cover bg-center'></div>
+          <div className='inset-0 bg-back_ground h-screen bg-cover bg-center'></div>
           <div className='absolute inset-0 z-1 flex items-center justify-center h-screen w-full bg-yellow-900 bg-opacity-75'></div>
           <div className='absolute inset-0  z-2  flex flex-col items-center justify-center'>
-            <div className='shadow-2xl back_ground rounded-lg w-4/5 h-96 bg-cover bg-center'>
+            <div className='shadow-2xl bg-back_ground rounded-lg w-4/5 h-96 bg-cover bg-center'>
               <div className='grid grid-cols-12 gap-1'>
                 <div className='relative my-6 px-8 col-span-12 sm:col-span-12 md:col-span-7 lg:col-span-7 2xl:col-span-7'>
                   <div className='border-l-4 border-gray-400 py-20 px-5 mx-2 absolute left-0'>
@@ -159,7 +160,23 @@ function Home() {
           </div>
         </div>
       </div>
-    </>
+      <div className='w-full pt-20'>
+        <div className='w-full pl-24 pr-24 pt-28'>
+          <div className='flex justify-center items-center w-full'>
+            <div className='w-64 h-1 bg-gray-400'></div>
+            <div className='text-gray-600 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>Mua bán</div>
+            <div className='w-64 h-1 bg-gray-400'></div>
+          </div>
+        </div>
+
+        <div className=' bg-[#fffdf1] px-36 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
+          <CardItem2 />
+          <CardItem2 />
+          <CardItem2 />
+          <CardItem2 />
+        </div>
+      </div>
+    </div>
   )
 }
 

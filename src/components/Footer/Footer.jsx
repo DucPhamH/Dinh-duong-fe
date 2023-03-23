@@ -1,7 +1,7 @@
 import { BsFacebook } from 'react-icons/bs'
 function Footer() {
   return (
-    <footer className='relative back_ground pt-8 pb-6'>
+    <footer className='relative bg-back_ground pt-8 pb-6'>
       <div className='container mx-auto px-10'>
         <div className='flex flex-wrap text-left lg:text-left'>
           <div className='w-full lg:w-6/12 px-4'>
