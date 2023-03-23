@@ -19,7 +19,7 @@ function UserAvatar() {
         <img className='w-12 h-12 mr-2 rounded-full' src={logo} alt='logo' />
         <div className='hidden md:block'>Phạm Đức</div>
         <svg
-          className='w-5 h-5 mx-1.5'
+          className='w-5 h-5 hidden md:block mx-1.5'
           aria-hidden='true'
           fill='currentColor'
           viewBox='0 0 20 20'
@@ -36,7 +36,7 @@ function UserAvatar() {
       {/* <!-- Dropdown menu --> */}
       {open && (
         <div
-          className='z-10 top-14 right-10 transform scale-0 group-hover:scale-100 absolute
+          className='z-10 fix_hover top-14 right-10 transform scale-0 group-hover:scale-100 absolute
           transition duration-300 ease-in-out md:top-14 bg-white divide-y divide-gray-100 rounded-lg shadow w-56'
         >
           <ul className='py-2 text-sm text-gray-700'>

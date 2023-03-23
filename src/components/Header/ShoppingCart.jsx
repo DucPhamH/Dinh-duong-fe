@@ -18,9 +18,9 @@ function ShoppingCart() {
           <TiShoppingCart className='h-10 w-10' />
         </div>
         {open && (
-          <div className='absolute fix_hover w-auto md:right-0 border md:top-14 rounded-b border-spacing-1 rounded-lg z-20'>
+          <div className='absolute right-[-10rem] top-20 fix_hover w-auto md:right-0 border md:top-14 rounded-b border-spacing-1 rounded-lg z-20'>
             <div className='shadow-xl w-[30rem] '>
-              <div className='p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100' style={{}}>
+              <div className='p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100'>
                 <div className='p-2 w-20'>
                   <img src='https://dummyimage.com/50x50/bababa/0011ff&text=50x50' alt='img product' />
                 </div>
@@ -30,7 +30,7 @@ function ShoppingCart() {
                 </div>
                 <div className='flex flex-col w-18 font-medium'>$12.22</div>
               </div>
-              <div className='p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100' style={{}}>
+              <div className='p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100'>
                 <div className='p-2 w-20'>
                   <img src='https://dummyimage.com/50x50/bababa/0011ff&text=50x50' alt='img product' />
                 </div>
@@ -40,7 +40,7 @@ function ShoppingCart() {
                 </div>
                 <div className='flex flex-col w-18 font-medium'>$12.22</div>
               </div>
-              <div className='p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100' style={{}}>
+              <div className='p-2 flex bg-white hover:bg-gray-100 cursor-pointer border-b border-gray-100'>
                 <div className='p-2 w-20'>
                   <img src='https://dummyimage.com/50x50/bababa/0011ff&text=50x50' alt='img product' />
                 </div>
