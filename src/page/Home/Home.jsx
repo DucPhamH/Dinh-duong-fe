@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import CardItem from './CardItem'
 import Banner from '../../components/Banner'
 import CardItem2 from './CardItem2'
+import { Link } from 'react-router-dom'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props
@@ -174,6 +175,14 @@ function Home() {
           <CardItem2 />
           <CardItem2 />
           <CardItem2 />
+        </div>
+        <div className='w-full h-auto flex justify-center items-center bg-[#fffdf1]'>
+          <Link
+            to='/mua-ban'
+            className='py-4 px-8 mr-2 mb-2 text-2xl font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+          >
+            Xem thêm
+          </Link>
         </div>
       </div>
     </div>
