@@ -1,4 +1,4 @@
-import { useRoutes } from 'react-router-dom'
+import { Navigate, Outlet, useRoutes } from 'react-router-dom'
 import MainLayout from './Layout/MainLayout'
 
 import RegisterLayout from './Layout/RegisterLayout'
@@ -8,13 +8,24 @@ import KienThuc from './page/KienThuc'
 import Login from './page/Login'
 import MonAn from './page/MonAn'
 import MuaBan from './page/MuaBan'
+import Profile from './page/Profile'
 import Register from './page/Register'
 import ThucDon from './page/ThucDon'
+
+const isAuthenticated = false
+function ProtectedRoute() {
+  return isAuthenticated ? <Outlet /> : <Navigate to='/login' />
+}
+
+function RejectedRoute() {
+  return !isAuthenticated ? <Outlet /> : <Navigate to='/' />
+}
 
 export default function useRouteElement() {
   const routeElement = useRoutes([
     {
       path: '/',
+      index: true,
       element: (
         <MainLayout>
           <Home />
@@ -23,6 +34,7 @@ export default function useRouteElement() {
     },
     {
       path: '/thuc-don',
+
       element: (
         <MainLayout>
           <ThucDon />
@@ -31,6 +43,7 @@ export default function useRouteElement() {
     },
     {
       path: '/kien-thuc',
+      index: true,
       element: (
         <MainLayout>
           <KienThuc />
@@ -39,6 +52,7 @@ export default function useRouteElement() {
     },
     {
       path: '/mon-an',
+      index: true,
       element: (
         <MainLayout>
           <MonAn />
@@ -47,6 +61,7 @@ export default function useRouteElement() {
     },
     {
       path: '/chia-se',
+      index: true,
       element: (
         <MainLayout>
           <ChiaSe />
@@ -55,6 +70,7 @@ export default function useRouteElement() {
     },
     {
       path: '/mua-ban',
+      index: true,
       element: (
         <MainLayout>
           <MuaBan />
@@ -62,20 +78,40 @@ export default function useRouteElement() {
       )
     },
     {
-      path: '/login',
-      element: (
-        <RegisterLayout>
-          <Login />
-        </RegisterLayout>
-      )
+      path: '',
+      element: <RejectedRoute />,
+      children: [
+        {
+          path: 'login',
+          element: (
+            <RegisterLayout>
+              <Login />
+            </RegisterLayout>
+          )
+        },
+        {
+          path: 'register',
+          element: (
+            <RegisterLayout>
+              <Register />
+            </RegisterLayout>
+          )
+        }
+      ]
     },
     {
-      path: '/register',
-      element: (
-        <RegisterLayout>
-          <Register />
-        </RegisterLayout>
-      )
+      path: '',
+      element: <ProtectedRoute />,
+      children: [
+        {
+          path: 'profile',
+          element: (
+            <MainLayout>
+              <Profile />
+            </MainLayout>
+          )
+        }
+      ]
     }
   ])
   return routeElement

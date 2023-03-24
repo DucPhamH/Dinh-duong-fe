@@ -2,7 +2,7 @@ import fruit from '../../asset/img/fruit.jpg'
 import { Link } from 'react-router-dom'
 function CardItem() {
   return (
-    <div className='max-w-lg p-2 m-2 lg:m-0 bg-white  hover:shadow-2xl border-2 transition-all ease-in duration-400 border-yellow-600 shadow-lg  rounded-lg'>
+    <div className='max-w-lg p-2 m-2 lg:m-0 bg-white  hover:shadow-2xl border-2 transition-all ease-in duration-400 hover:border-red-600 shadow-lg  rounded-lg'>
       <Link to='#'>
         <img className='rounded-t-lg' src={fruit} alt='fruit' />
       </Link>

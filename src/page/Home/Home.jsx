@@ -6,6 +6,7 @@ import CardItem from './CardItem'
 import Banner from '../../components/Banner'
 import CardItem2 from './CardItem2'
 import { Link } from 'react-router-dom'
+import CardItem3 from './CardItem3'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props
@@ -170,7 +171,7 @@ function Home() {
           </div>
         </div>
 
-        <div className=' bg-[#fffdf1] px-36 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10'>
+        <div className=' bg-[#fffdf1] px-36 gap-2 grid  grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-10'>
           <CardItem2 />
           <CardItem2 />
           <CardItem2 />
@@ -179,10 +180,30 @@ function Home() {
         <div className='w-full h-auto flex justify-center items-center bg-[#fffdf1]'>
           <Link
             to='/mua-ban'
-            className='py-4 px-8 mr-2 mb-2 text-2xl font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700'
+            className='py-4 px-8 mr-2 mb-2 text-2xl font-medium transition-all ease-in duration-400 hover:scale-105 text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-orange-400'
           >
             Xem thêm
           </Link>
+        </div>
+      </div>
+
+      <div className='w-full pt-20'>
+        <div className='w-full pl-24 pr-24 pt-28'>
+          <div className='flex justify-center items-center w-full'>
+            <div className='w-64 h-1 bg-gray-400'></div>
+            <div className='text-gray-600 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
+              Góc chia sẻ
+            </div>
+            <div className='w-64 h-1 bg-gray-400'></div>
+          </div>
+        </div>
+
+        <div className=' grid grid-cols-1 lg:grid-cols-5 lg:gap-20 '>
+          <div className='col-span-3'>
+            <CardItem3 />
+            <CardItem3 />
+            <CardItem3 />
+          </div>
         </div>
       </div>
     </div>

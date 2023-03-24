@@ -41,19 +41,19 @@ function UserAvatar() {
         >
           <ul className='py-2 text-sm text-gray-700'>
             <li>
-              <Link to='/' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
-                Dashboard
+              <Link to='/profile' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
+                Tài khoản của tôi
               </Link>
             </li>
             <li>
               <Link to='#' className='block px-4 py-2 text-2xl hover:bg-gray-100'>
-                Settings
+                Đơn mua
               </Link>
             </li>
           </ul>
           <div className='py-2'>
             <Link to='#' className='block text-red-500 px-4 py-2 text-2xl  hover:bg-gray-100'>
-              Sign out
+              Đăng xuất
             </Link>
           </div>
         </div>
