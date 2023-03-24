@@ -7,6 +7,7 @@ import Banner from '../../components/Banner'
 import CardItem2 from './CardItem2'
 import { Link } from 'react-router-dom'
 import CardItem3 from './CardItem3'
+import Contact from './Contact'
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props
@@ -198,11 +199,25 @@ function Home() {
           </div>
         </div>
 
-        <div className=' grid grid-cols-1 lg:grid-cols-5 lg:gap-20 '>
+        <div className=' lg:mx-32 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
           <div className='col-span-3'>
             <CardItem3 />
             <CardItem3 />
             <CardItem3 />
+            <CardItem3 />
+          </div>
+          <div className='col-span-2'>
+            <Contact />
+            <div className='mx-20  mt-10 '>
+              <iframe
+                className=' w-full rounded-xl border-4 border-red-600 h-[25rem]'
+                src='https://www.youtube.com/embed/J2Fi2CemwvE'
+                title='YouTube video player'
+                frameborder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
