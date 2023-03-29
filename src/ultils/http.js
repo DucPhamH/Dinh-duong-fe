@@ -30,7 +30,7 @@ import HttpStatusCode from '../constants/httpStatusCode.enum'
 // const http = new Http().instance
 
 const instance = axios.create({
-  baseURL: 'https://api-ecom.duthanhduoc.com/',
+  baseURL: 'https://json-sever-fe.vercel.app/',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json'
