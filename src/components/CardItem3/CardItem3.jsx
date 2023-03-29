@@ -1,6 +1,6 @@
-function CardItem3({ product }) {
+function CardItem3({ product, className = 'flex flex-col justify-center mx-20 mt-5' }) {
   return (
-    <div className='flex flex-col justify-center mx-20 mt-5'>
+    <div className={className}>
       <div className='relative w-full hover:border-red-600 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 border border-white bg-white'>
         <div className='w-full md:w-72 bg-white grid place-items-center'>
           <img src={product.image} alt='tailwind logo' className='rounded-xl w-full      bg-cover' />
