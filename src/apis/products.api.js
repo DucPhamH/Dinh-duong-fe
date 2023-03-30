@@ -1,3 +1,3 @@
 import http from '../ultils/http'
 
-export const getProducts = () => http.get('products')
+export const getProducts = (params) => http.get('products', { params })

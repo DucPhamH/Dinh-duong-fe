@@ -1,18 +1,29 @@
 import { useQuery } from '@tanstack/react-query'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getProducts } from '../../apis/products.api'
 import CardItem3 from '../../components/CardItem3/CardItem3'
+import Pagination from '../../components/Pagination'
+import useQueryParams from '../../hooks/useQueryParam'
 
 function KienThuc() {
+  const queryParams = useQueryParams()
+
+  const queryConfig = {
+    _page: queryParams._page || '1',
+    _limit: queryParams._limit || '4'
+  }
+
   const { data: productsData, isLoading } = useQuery({
-    queryKey: ['products'],
+    queryKey: ['products', queryConfig],
     queryFn: () => {
-      return getProducts()
-    }
+      return getProducts(queryConfig)
+    },
+    keepPreviousData: true
   })
   const products = productsData?.data
-  console.log(isLoading)
-  console.log(products)
+  console.log(productsData)
+  console.log(queryParams)
   return (
     <div className='pt-10 lg:mx-40 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
       <div className='col-span-3 mx-5 md:mx-0 '>
@@ -37,6 +48,7 @@ function KienThuc() {
               <CardItem3 product={product} className='flex flex-col justify-center mt-5' />
             </div>
           ))}
+        <Pagination queryConfig={queryConfig} pageSize={3} />
       </div>
       <div className='col-span-2 mx-5 md:mx-0'>
         <div className='mt-10 '>
@@ -75,7 +87,7 @@ function KienThuc() {
             </div>
             <div className='w-full text-gray-800  line-clamp-1'>
               <Link to='/' className='line-clamp-2 px-5 py-5 hover:text-orange-600'>
-                Ăn nhiều trứng có tốt cho sức khoẻ không
+                Ăn nhiều trứng có tốt cho sức khoẻ không ?
               </Link>
               <div className='w-full h-[1px] bg-gray-400'></div>
             </div>

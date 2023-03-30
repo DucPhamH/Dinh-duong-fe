@@ -7,12 +7,14 @@ import SliderCard from './Components/SliderCard'
 import CardItem4 from '../../components/CardItem4'
 import { useQuery } from '@tanstack/react-query'
 import { getProducts } from '../../apis/products.api'
+import useQueryParams from '../../hooks/useQueryParam'
 
 function Home() {
+  const queryParams = useQueryParams()
   const { data: productsData, isLoading } = useQuery({
-    queryKey: ['products'],
+    queryKey: ['products', queryParams],
     queryFn: () => {
-      return getProducts()
+      return getProducts(queryParams)
     }
   })
   const products = productsData?.data
@@ -84,7 +86,7 @@ function Home() {
         <div className=' lg:mx-32 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
           <div className='col-span-3'>
             {products &&
-              products.map((product) => (
+              products.slice(0, 4).map((product) => (
                 <div key={product.id}>
                   <CardItem3 product={product} />
                 </div>
