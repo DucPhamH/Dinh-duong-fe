@@ -6,21 +6,27 @@ import Contact from './Components/Contact'
 import SliderCard from './Components/SliderCard'
 import CardItem4 from '../../components/CardItem4'
 import { useQuery } from '@tanstack/react-query'
-import { getProducts } from '../../apis/products.api'
+import { getFruit, getProducts } from '../../apis/products.api'
 import useQueryParams from '../../hooks/useQueryParam'
 
 function Home() {
   const queryParams = useQueryParams()
-  const { data: productsData, isLoading } = useQuery({
+  const { data: productsData } = useQuery({
     queryKey: ['products', queryParams],
     queryFn: () => {
       return getProducts(queryParams)
     }
   })
   const products = productsData?.data
-  console.log(isLoading)
-  console.log(products)
 
+  const { data: fruitData } = useQuery({
+    queryKey: ['fruit', queryParams],
+    queryFn: () => {
+      return getFruit(queryParams)
+    }
+  })
+  const fruit = fruitData?.data
+  console.log(fruit)
   return (
     <div>
       <Banner />
@@ -56,13 +62,15 @@ function Home() {
           </div>
         </div>
 
-        <div className=' bg-[#fffdf1] px-36 gap-2 grid  grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-10'>
-          <CardItem2 />
-          <CardItem2 />
-          <CardItem2 />
-          <CardItem2 />
+        <div className=' bg-[#fffdf1] py-5 px-36 gap-2 grid  grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-4 lg:gap-10'>
+          {fruit &&
+            fruit.slice(0, 4).map((fruit) => (
+              <div key={fruit.id}>
+                <CardItem2 fruit={fruit} />
+              </div>
+            ))}
         </div>
-        <div className='w-full h-auto flex justify-center items-center bg-[#fffdf1]'>
+        <div className='w-full pt-10 h-auto flex justify-center items-center bg-[#fffdf1]'>
           <Link
             to='/mua-ban'
             className='py-4 px-8 mr-2 mb-2 text-2xl font-medium transition-all ease-in duration-400 hover:scale-105 text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-orange-400'
@@ -83,7 +91,7 @@ function Home() {
           </div>
         </div>
 
-        <div className=' lg:mx-32 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
+        <div className=' mx-3 lg:mx-32 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
           <div className='col-span-3'>
             {products &&
               products.slice(0, 4).map((product) => (

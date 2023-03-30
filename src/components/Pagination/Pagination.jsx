@@ -18,7 +18,7 @@ Với range = 2 áp dụng cho khoảng cách đầu, cuối và xung quanh curr
  */
 
 const RANGE = 2
-export default function Pagination({ queryConfig, pageSize }) {
+export default function Pagination({ queryConfig, pageSize, url }) {
   const page = Number(queryConfig._page)
   const renderPagination = () => {
     let dotAfter = false
@@ -66,7 +66,7 @@ export default function Pagination({ queryConfig, pageSize }) {
         return (
           <Link
             to={{
-              pathname: '/kien-thuc/',
+              pathname: url,
               search: createSearchParams({
                 ...queryConfig,
                 _page: pageNumber.toString()
@@ -95,7 +95,7 @@ export default function Pagination({ queryConfig, pageSize }) {
       ) : (
         <Link
           to={{
-            pathname: '/kien-thuc/',
+            pathname: url,
             search: createSearchParams({
               ...queryConfig,
               _page: (page - 1).toString()
@@ -114,7 +114,7 @@ export default function Pagination({ queryConfig, pageSize }) {
       ) : (
         <Link
           to={{
-            pathname: '/kien-thuc/',
+            pathname: url,
             search: createSearchParams({
               ...queryConfig,
               _page: (page + 1).toString()

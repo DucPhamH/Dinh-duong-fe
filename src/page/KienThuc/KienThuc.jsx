@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { getProducts } from '../../apis/products.api'
 import CardItem3 from '../../components/CardItem3/CardItem3'
@@ -48,7 +47,7 @@ function KienThuc() {
               <CardItem3 product={product} className='flex flex-col justify-center mt-5' />
             </div>
           ))}
-        <Pagination queryConfig={queryConfig} pageSize={3} />
+        <Pagination queryConfig={queryConfig} pageSize={3} url='/kien-thuc' />
       </div>
       <div className='col-span-2 mx-5 md:mx-0'>
         <div className='mt-10 '>
@@ -67,36 +66,26 @@ function KienThuc() {
               Có thể bạn quan tâm
             </div>
             <div className='w-full h-[1px] bg-gray-400'></div>
-            <div className='w-full text-gray-800 line-clamp-1 '>
-              <Link to='/' className='line-clamp-1 px-5 py-5 hover:text-orange-600'>
-                Ăn nhiều trứng có tốt cho sức khoẻ không ?
-              </Link>
-              <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full text-gray-800 px-5 my-5 hover:text-orange-600 line-clamp-1 '>
+              Ăn nhiều trứng có tốt cho sức khoẻ không ?
             </div>
-            <div className='w-full text-gray-800 line-clamp-1 '>
-              <Link to='/' className='line-clamp-2 px-5 py-5 hover:text-orange-600'>
-                Ăn nhiều trứng có tốt cho sức khoẻ không ?
-              </Link>
-              <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full text-gray-800 px-5 my-5 hover:text-orange-600 line-clamp-1 '>
+              Ăn nhiều trứng có tốt cho sức khoẻ không ?
             </div>
-            <div className='w-full text-gray-800 line-clamp-1 '>
-              <Link to='/' className='line-clamp-2 px-5 py-5 hover:text-orange-600'>
-                Ăn nhiều trứng có tốt cho sức khoẻ không ?
-              </Link>
-              <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full text-gray-800 px-5 my-5 hover:text-orange-600 line-clamp-1 '>
+              Ăn nhiều trứng có tốt cho sức khoẻ không ?
             </div>
-            <div className='w-full text-gray-800  line-clamp-1'>
-              <Link to='/' className='line-clamp-2 px-5 py-5 hover:text-orange-600'>
-                Ăn nhiều trứng có tốt cho sức khoẻ không ?
-              </Link>
-              <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full text-gray-800 px-5 my-5 hover:text-orange-600 line-clamp-1 '>
+              Ăn nhiều trứng có tốt cho sức khoẻ không ?
             </div>
-            <div className='w-full text-gray-800 line-clamp-1 '>
-              <Link to='/' className='line-clamp-2 px-5 py-5 hover:text-orange-600'>
-                Ăn nhiều trứng có tốt cho sức khoẻ không ?
-              </Link>
-              <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full h-[1px] bg-gray-400'></div>
+            <div className='w-full text-gray-800 px-5 my-5 hover:text-orange-600 line-clamp-1 '>
+              Ăn nhiều trứng có tốt cho sức khoẻ không ?
             </div>
+            <div className='w-full h-[1px] bg-gray-400'></div>
           </div>
         </div>
       </div>
