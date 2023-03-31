@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
 import CardItem2 from '../../components/CardItem2/CardItem2'
-import { Link } from 'react-router-dom'
+import { Link, useMatch } from 'react-router-dom'
 import CardItem3 from '../../components/CardItem3/CardItem3'
 import Contact from './Components/Contact'
 import SliderCard from './Components/SliderCard'
@@ -11,6 +11,7 @@ import useQueryParams from '../../hooks/useQueryParam'
 
 function Home() {
   const queryParams = useQueryParams()
+
   const { data: productsData } = useQuery({
     queryKey: ['products', queryParams],
     queryFn: () => {
@@ -96,7 +97,7 @@ function Home() {
             {products &&
               products.slice(0, 4).map((product) => (
                 <div key={product.id}>
-                  <CardItem3 product={product} />
+                  <CardItem3 product={product} pathName={`kien-thuc/${product.id}`} />
                 </div>
               ))}
           </div>

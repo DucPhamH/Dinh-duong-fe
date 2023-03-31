@@ -1,5 +1,4 @@
 import { useQuery } from '@tanstack/react-query'
-import { Link } from 'react-router-dom'
 import { getProducts } from '../../apis/products.api'
 import CardItem3 from '../../components/CardItem3/CardItem3'
 import Pagination from '../../components/Pagination'
@@ -7,7 +6,7 @@ import useQueryParams from '../../hooks/useQueryParam'
 
 function KienThuc() {
   const queryParams = useQueryParams()
-
+  console.log(queryParams)
   const queryConfig = {
     _page: queryParams._page || '1',
     _limit: queryParams._limit || '4'
@@ -44,7 +43,7 @@ function KienThuc() {
         {products &&
           products.map((product) => (
             <div key={product.id}>
-              <CardItem3 product={product} className='flex flex-col justify-center mt-5' />
+              <CardItem3 product={product} pathName={`${product.id}`} className='flex flex-col justify-center mt-5' />
             </div>
           ))}
         <Pagination queryConfig={queryConfig} pageSize={3} url='/kien-thuc' />

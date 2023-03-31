@@ -1,9 +1,11 @@
-function CardItem3({ product, className = 'flex flex-col justify-center mx-20 mt-5' }) {
+import { Link } from 'react-router-dom'
+
+function CardItem3({ product, className = 'flex flex-col justify-center mx-20 mt-5', pathName }) {
   return (
-    <div className={className}>
+    <Link to={pathName} className={className}>
       <div className='relative w-full hover:border-red-600 flex flex-col md:flex-row md:space-x-5 space-y-3 md:space-y-0 rounded-xl shadow-lg p-3 border border-white bg-white'>
         <div className='w-full md:w-72 bg-white grid place-items-center'>
-          <img src={product.image} alt='tailwind logo' className='rounded-xl w-full      bg-cover' />
+          <img src={product.image} alt='tailwind logo' className='rounded-xl w-full  bg-cover' />
         </div>
         <div className='w-full bg-white flex flex-col space-y-2 p-10'>
           <h3 className='font-black text-gray-800 line-clamp-1 md:text-3xl text-xl'>{product.title}</h3>
@@ -12,7 +14,7 @@ function CardItem3({ product, className = 'flex flex-col justify-center mx-20 mt
           <span className='font-normal text-gray-600 text-base'>By night</span>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

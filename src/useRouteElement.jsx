@@ -5,6 +5,7 @@ import RegisterLayout from './Layout/RegisterLayout'
 import ChiaSe from './page/ChiaSe'
 import Home from './page/Home'
 import KienThuc from './page/KienThuc'
+import KienThucDetail from './page/KienThuc/components/KienThucDetail/KienThucDetail'
 import Login from './page/Login'
 import MonAn from './page/MonAn'
 import MuaBan from './page/MuaBan'
@@ -47,6 +48,15 @@ export default function useRouteElement() {
       element: (
         <MainLayout>
           <KienThuc />
+        </MainLayout>
+      )
+    },
+    {
+      path: '/kien-thuc/:id',
+      index: true,
+      element: (
+        <MainLayout>
+          <KienThucDetail />
         </MainLayout>
       )
     },
