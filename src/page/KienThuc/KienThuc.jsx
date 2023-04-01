@@ -25,9 +25,9 @@ function KienThuc() {
   return (
     <div className='pt-10 lg:mx-40 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
       <div className='col-span-3 mx-5 md:mx-0 '>
-        <div className='text-gray-600 font-semibold text-5xl '>Kiến thức dinh dưỡng</div>
-        <div className='w-full h-1 bg-gray-400 my-8'></div>
-        <div className=' text-gray-800 text-3xl '>
+        <div className='text-red-700 font-semibold text-5xl '>Kiến thức dinh dưỡng</div>
+        <div className='w-full h-[2px] bg-red-200 my-8'></div>
+        <div className=' text-gray-800 text-3xl italic '>
           Chất dinh dưỡng có vai trò vô cùng quan trọng đối với sức khoẻ và sự phát triển của cơ thể. <br /> <br />
           Chế độ ăn đầy đủ dinh dưỡng là bữa ăn có đủ các thành phần dinh dưỡng cả về số lượng và chất lượng. Cùng tìm
           hiểu dinh dưỡng là gì và những lợi ích mà dinh dưỡng mang đến cho sức khỏe của bạn và gia đình bạn nhé!
