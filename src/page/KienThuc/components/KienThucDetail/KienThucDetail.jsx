@@ -32,7 +32,7 @@ export default function KienThucDetail() {
         {product && (
           <>
             <div className='w-[90%] lg:w-[60%]  mt-14 '>
-              <h1 className='text-5xl flex justify-center py-3 font-semibold text-red-800'>{product.title}</h1>
+              <h1 className='text-5xl flex py-5 font-semibold text-red-800'>{product.title}</h1>
               <div className='italic mx-10 flex justify-between text-gray-500 font-medium'>
                 <div>Ngày tạo: 01/04/2023</div>
                 <span className='pl-3 text-orange-600'>Người viết: Pham Duc</span>

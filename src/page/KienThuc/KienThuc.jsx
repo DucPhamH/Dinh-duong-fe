@@ -46,7 +46,7 @@ function KienThuc() {
               <CardItem3 product={product} pathName={`${product.id}`} className='flex flex-col justify-center mt-5' />
             </div>
           ))}
-        <Pagination queryConfig={queryConfig} pageSize={3} url='/kien-thuc' />
+        <Pagination queryConfig={queryConfig} pageSize={2} url='/kien-thuc' />
       </div>
       <div className='col-span-2 mx-5 md:mx-0'>
         <div className='mt-10 '>
