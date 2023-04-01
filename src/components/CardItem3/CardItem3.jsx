@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom'
 
-function CardItem3({ product, className = 'flex flex-col justify-center mx-20 mt-5', pathName }) {
+function CardItem3({ product, className = 'flex flex-col cursor-pointer justify-center mx-20 mt-5', pathName }) {
   const navigate = useNavigate()
   return (
     <div onClick={() => navigate(pathName)} className={className}>

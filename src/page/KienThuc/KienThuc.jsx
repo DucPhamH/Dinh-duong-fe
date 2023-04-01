@@ -43,7 +43,11 @@ function KienThuc() {
         {products &&
           products.map((product) => (
             <div key={product.id}>
-              <CardItem3 product={product} pathName={`${product.id}`} className='flex flex-col justify-center mt-5' />
+              <CardItem3
+                product={product}
+                pathName={`${product.id}`}
+                className='flex cursor-pointer flex-col justify-center mt-5'
+              />
             </div>
           ))}
         <Pagination queryConfig={queryConfig} pageSize={2} url='/kien-thuc' />
