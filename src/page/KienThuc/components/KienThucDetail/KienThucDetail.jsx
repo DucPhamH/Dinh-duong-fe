@@ -15,7 +15,7 @@ export default function KienThucDetail() {
   const product = productsDetail?.data
   console.log(product)
   return (
-    <div className='text-black text-4xl'>
+    <div className='text-black'>
       {product && (
         <div
           dangerouslySetInnerHTML={{
