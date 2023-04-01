@@ -58,7 +58,7 @@ export default function KienThucDetail() {
           {products &&
             products.slice(0, 3).map((product) => (
               <div key={product.id}>
-                <CardItem3 product={product} pathName={`${product.id}`} />
+                <CardItem3 product={product} pathName={`/kien-thuc/${product.id}`} />
               </div>
             ))}
         </div>
