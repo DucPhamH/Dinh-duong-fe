@@ -8,8 +8,8 @@ function Navbar({ activeMenu }) {
     },
     {
       id: 1,
-      title: 'Thực Đơn',
-      route: '/thuc-don'
+      title: 'Món ăn',
+      route: '/mon-an'
     },
     {
       id: 2,
@@ -18,8 +18,8 @@ function Navbar({ activeMenu }) {
     },
     {
       id: 3,
-      title: 'Món ăn',
-      route: '/mon-an'
+      title: 'Thực Đơn',
+      route: '/thuc-don'
     },
     {
       id: 4,

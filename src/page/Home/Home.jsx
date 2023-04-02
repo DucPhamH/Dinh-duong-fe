@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
 import CardItem2 from '../../components/CardItem2/CardItem2'
-import { Link, useMatch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import CardItem3 from '../../components/CardItem3/CardItem3'
 import Contact from './Components/Contact'
 import SliderCard from './Components/SliderCard'
@@ -34,9 +34,7 @@ function Home() {
       <div className='w-full px-24 md:px-28 lg:px-32 pt-28'>
         <div className='flex justify-center items-center w-full'>
           <div className='w-64 h-1  bg-gray-400'></div>
-          <div className='text-gray-600  text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
-            Thực đơn hàng ngày
-          </div>
+          <div className='text-red-800  text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>Món ăn ngon</div>
           <div className='w-64 h-1 bg-gray-400'></div>
         </div>
 
@@ -46,19 +44,24 @@ function Home() {
         <div className='w-full pl-24 pr-24 pt-28'>
           <div className='flex justify-center items-center w-full'>
             <div className='w-64 h-1 bg-gray-400'></div>
-            <div className='text-gray-600 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
+            <div className='text-red-800 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
               Kiến thức dinh dưỡng
             </div>
             <div className='w-64 h-1 bg-gray-400'></div>
           </div>
         </div>
-        <CardItem4 />
+        {products &&
+          products.slice(1, 2).map((product) => (
+            <div key={product.id}>
+              <CardItem4 product={product} />
+            </div>
+          ))}
       </div>
       <div className='w-full pt-20'>
         <div className='w-full pl-24 pr-24 pt-28'>
           <div className='flex justify-center items-center w-full'>
             <div className='w-64 h-1 bg-gray-400'></div>
-            <div className='text-gray-600 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>Mua bán</div>
+            <div className='text-red-800 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>Mua bán</div>
             <div className='w-64 h-1 bg-gray-400'></div>
           </div>
         </div>
@@ -85,7 +88,7 @@ function Home() {
         <div className='w-full pl-24 pr-24 pt-28'>
           <div className='flex justify-center items-center w-full'>
             <div className='w-64 h-1 bg-gray-400'></div>
-            <div className='text-gray-600 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
+            <div className='text-red-800 text-xl font-bold md:text-5xl flex justify-center mx-10 pb-16'>
               Góc chia sẻ
             </div>
             <div className='w-64 h-1 bg-gray-400'></div>

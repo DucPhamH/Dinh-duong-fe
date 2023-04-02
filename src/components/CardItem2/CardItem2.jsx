@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import fruit from '../../asset/img/fruit.jpg'
+import ProductRating from '../ProductRating'
 
 export default function CardItem2({ fruit }) {
   return (
@@ -16,6 +16,7 @@ export default function CardItem2({ fruit }) {
             <span className='text-3xl font-bold text-slate-900'>${fruit.last_price}</span>
             <span className='text-sm italic text-slate-900 line-through'>${fruit.price}</span>
           </p>
+          <ProductRating rating={fruit.rate} />
         </div>
         <Link
           href='#'
