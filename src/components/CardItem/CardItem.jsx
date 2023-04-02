@@ -7,7 +7,7 @@ function CardItem({ food }) {
       </div>
       <div className='p-5'>
         <Link to='#'>
-          <h1 className='mb-2 h-[4.5rem] text-3xl font-bold tracking-tight line-clamp-2 text-gray-900'>{food.title}</h1>
+          <h1 className='mb-2 h-[4.5rem] text-3xl font-bold tracking-tight line-clamp-2 text-red-800'>{food.title}</h1>
         </Link>
         <p className='mb-3 font-normal h-[7.5rem] text-gray-700 line-clamp-3 dark:text-gray-400'>{food.description}</p>
         <Link

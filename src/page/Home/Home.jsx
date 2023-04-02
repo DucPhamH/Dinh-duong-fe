@@ -8,11 +8,12 @@ import CardItem4 from '../../components/CardItem4'
 import { useQuery } from '@tanstack/react-query'
 import { getFruit, getProducts } from '../../apis/products.api'
 import useQueryParams from '../../hooks/useQueryParam'
+import Skeleton from '../../components/Skeleton'
 
 function Home() {
   const queryParams = useQueryParams()
 
-  const { data: productsData } = useQuery({
+  const { data: productsData, isLoading } = useQuery({
     queryKey: ['products', queryParams],
     queryFn: () => {
       return getProducts(queryParams)
@@ -97,12 +98,16 @@ function Home() {
 
         <div className=' mx-3 lg:mx-32 grid grid-cols-1 lg:grid-cols-5 lg:gap-10 '>
           <div className='col-span-3'>
-            {products &&
+            {isLoading ? (
+              <Skeleton />
+            ) : (
+              products &&
               products.slice(0, 4).map((product) => (
                 <div key={product.id}>
                   <CardItem3 product={product} pathName={`kien-thuc/${product.id}`} />
                 </div>
-              ))}
+              ))
+            )}
           </div>
 
           <Contact />
