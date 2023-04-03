@@ -30,7 +30,7 @@ function Home() {
   const fruit = fruitData?.data
   console.log(fruit)
   return (
-    <div>
+    <div className='pb-40'>
       <Banner />
       <div className='w-full px-24 md:px-28 lg:px-32 pt-28'>
         <div className='flex justify-center items-center w-full'>

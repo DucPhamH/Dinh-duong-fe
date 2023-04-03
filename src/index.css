@@ -46,3 +46,13 @@ body {
 .back_ground {
   background: rgb(245, 241, 241);
 }
+
+.fix_hover2::after {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 3rem;
+  top: -40px;
+  right: 0px;
+  background: red;
+}

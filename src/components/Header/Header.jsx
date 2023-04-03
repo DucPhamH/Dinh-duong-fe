@@ -1,7 +1,7 @@
 import React from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaSearch } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useMatch, useParams } from 'react-router-dom'
 import logo from '../../asset/img/logoHealthy.png'
 import Navbar from './Navbar'
 import Search from './Search'
@@ -11,7 +11,8 @@ import UserAvatar from './UserAvatar'
 function Header() {
   const [activeMenu, setActiveMenu] = React.useState(true)
   const [activeSearch, setActiveSearch] = React.useState(false)
-
+  const matchHome = useMatch('/')
+  console.log(matchHome)
   const handleActiveSearch = () => {
     setActiveSearch(!activeSearch)
   }
@@ -44,15 +45,15 @@ function Header() {
         <Navbar activeMenu={activeMenu} />
         <div className='flex justify-center items-center'>
           <ShoppingCart />
-          <UserAvatar />
-          {/* <Link
-              to='/login'
-              className='relative inline-flex items-center justify-center p-0.5 mr-4 overflow-hidden text-xl font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200'
-            >
-              <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0'>
-                Đăng nhập
-              </span>
-            </Link> */}
+          {/* <UserAvatar /> */}
+          <Link
+            to='/login'
+            className='relative inline-flex items-center justify-center p-0.5 mr-4 overflow-hidden text-xl font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200'
+          >
+            <span className='relative px-5 py-2.5 transition-all ease-in duration-75 bg-white rounded-md group-hover:bg-opacity-0'>
+              Đăng nhập
+            </span>
+          </Link>
           <button
             onClick={handleActiveSearch}
             className='search-menu flex justify-center items-center h-12 px-8 font-bold text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
