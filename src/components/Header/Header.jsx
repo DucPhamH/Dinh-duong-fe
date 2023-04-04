@@ -54,16 +54,18 @@ function Header() {
               Đăng nhập
             </span>
           </Link>
-          <button
-            onClick={handleActiveSearch}
-            className='search-menu flex justify-center items-center h-12 px-8 font-bold text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
+          {matchHome && (
+            <button
+              onClick={handleActiveSearch}
+              className='search-menu flex justify-center items-center h-12 px-8 font-bold text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
     rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 focus:outline-none'
-          >
-            <FaSearch />
-          </button>
+            >
+              <FaSearch />
+            </button>
+          )}
         </div>
       </div>
-      <Search activeSearch={activeSearch} />
+      {matchHome && <Search activeSearch={activeSearch} />}
     </div>
   )
 }

@@ -26,7 +26,7 @@ function Muaban() {
       <div className='grid grid-cols-1 md:grid-cols-3 py-10 px-32 gap-10 bg-red-800 '>
         <div className='col-span-1  flex justify-center items-center text-4xl text-white uppercase font-semibold'>
           <img src={shop} alt='shop' className='h-24 pr-5' />
-          <div>Cửa Hàng</div>
+          <div className='text-orange-100'>Cửa Hàng</div>
         </div>
 
         <div className='w-full flex justify-center items-center'>
